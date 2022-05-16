@@ -61,7 +61,7 @@ const posts = [
 ]
 // 1. Creo la funzione per stampare i post
 function printPost(container, post) {
-    const postHTML = document.querySelector(".post").content.cloneNode(true)
+    const postHTML = document.querySelector("#post").content.cloneNode(true)
 
     postHTML.querySelector(".profile-pic img").src = post.author.image
     postHTML.querySelector(".post-meta__author").innerHTML = post.author.name
