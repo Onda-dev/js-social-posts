@@ -78,3 +78,11 @@ const postContainerHTML = document.querySelector("#container")
 for (let i = 0; i < posts.length; i++) {
     printPost(postContainerHTML, posts[i]);
 }
+
+// 3. Creo la funzione per i like
+const likeButton = document.querySelector(".like-button")
+likeButton.addEventListener("click", liked)
+
+function liked () {
+    likeButton.classList.add("like-button--liked")
+}
