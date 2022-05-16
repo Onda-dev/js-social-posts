@@ -63,7 +63,7 @@ const posts = [
 function printPost(container, post) {
     const postHTML = document.querySelector("#post").content.cloneNode(true)
 
-    postHTML.querySelector(".profile-pic img").src = post.author.image
+    postHTML.querySelector(".post-meta__icon img").src = post.author.image
     postHTML.querySelector(".post-meta__author").innerHTML = post.author.name
     postHTML.querySelector(".post-meta__time").innerHTML = post.created
     postHTML.querySelector(".post__text").innerHTML = post.content
@@ -73,7 +73,7 @@ function printPost(container, post) {
     container.append(postHTML);
 }
 // 2. Stampo i post
-const postContainerHTML = document.querySelector(".post-list")
+const postContainerHTML = document.querySelector("#container")
 
 for (let i = 0; i < posts.length; i++) {
     printPost(postContainerHTML, posts[i]);
