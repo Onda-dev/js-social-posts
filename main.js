@@ -58,4 +58,18 @@ const posts = [
         "likes": 95,
         "created": "2021-03-05"
     }
-];
+]
+// 1. Creo la funzione per stampare i post
+function printPost(container, post) {
+    const postHTML = document.querySelector(".post").content.cloneNode(true)
+
+    postHTML.querySelector(".profile-pic img").src = post.author.image
+    postHTML.querySelector(".post-meta__author").innerHTML = post.author.name
+    postHTML.querySelector(".post-meta__time").innerHTML = post.created
+    postHTML.querySelector(".post__text").innerHTML = post.content
+    postHTML.querySelector(".post__image").src = post.media
+    postHTML.querySelector(".js-likes-counter").innerHTML = post.likes
+
+    container.append(postHTML);
+}
+// 2. Stampo i post
