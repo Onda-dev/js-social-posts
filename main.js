@@ -73,3 +73,8 @@ function printPost(container, post) {
     container.append(postHTML);
 }
 // 2. Stampo i post
+const postContainerHTML = document.querySelector(".post-list")
+
+for (let i = 0; i < posts.length; i++) {
+    printPost(postContainerHTML, posts[i]);
+}
